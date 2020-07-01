@@ -1,11 +1,27 @@
-inp = input("Enter the card number: ")
+def main():
 
-def luns_algo(inp):
+    #Takes the input for the credit card number
+    card_number = input("Number: ")
 
-    even_val = []
-    for i in range(len(inp) - 2, - 1, -2):
-        even_val.append(inp[i])
+    #Deploys Luhn's Algorithm on the given card number
+    result = luhns_algo(card_number)
 
-    print(even_val)
+    #Prints result
+    print(result)
+
+
+#Function for Luhn's algorithm
+def luhns_algo(card_number):
+
+    length = len(card_number)
+    for i in range(length - 1, -1, -1):
+        print(card_number[i])
+
+    return 0
+
+
+#The main function to run the program
+if __name__ == "__main__":
+    main()
 
 luns_algo(inp)
